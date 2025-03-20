@@ -1,0 +1,28 @@
+.sign_num {
+  background: #70b8db;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  font-weight: 800;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid #143d52;
+}
+
+.highlight .djs-outline {
+  rx: 14px;
+  ry: 14px;
+  stroke-width: 2px !important;
+  stroke: #155cb5 !important;
+  fill: rgba(194, 213, 237, 0.4) !important;
+}
+
+.highlight:not(.djs-connection) .djs-visual> :nth-child(1) {
+  rx: 14px;
+  ry: 14px;
+  fill: #c2d5ed !important;
+}

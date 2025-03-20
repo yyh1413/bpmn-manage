@@ -1,0 +1,46 @@
+@import './base.css';
+
+.bjs-powered-by {
+  display: none !important;
+}
+
+.el-card__header {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #555;
+}
+
+.el-table__header thead th {
+  color: #242424;
+  font-weight: 600;
+}
+
+/* 在这里添加你的CSS样式 */
+.el-pagination {
+  display: flex;
+  margin: 15px 0;
+  justify-content: flex-end;
+}
+
+.el-button+.el-button {
+  padding: 0 5px !important;
+  margin-left: 0 !important;
+}
+
+.el-tabs__item.is-active,
+.el-tabs__item:hover {
+  color: #b5152b !important;
+}
+
+.el-tabs__active-bar {
+  background-color: #b5152b !important;
+}
+
+
+.el-dialog {
+  box-shadow: 0px 0px 11px 5px rgb(0 0 0 / 20%) !important;
+}
+
+:root {
+  --el-color-primary: #155cb5 !important;
+}

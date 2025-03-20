@@ -1,0 +1,147 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font: 12px/1.5tahoma, arial, \5b8b\4f53;
+}
+
+address,
+cite,
+dfn,
+em,
+var {
+  font-style: normal;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: couriernew, courier, monospace;
+}
+
+small {
+  font-size: 12px;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  /* text-decoration: underline; */
+}
+
+sup {
+  vertical-align: text-top;
+}
+
+sub {
+  vertical-align: text-bottom;
+}
+
+legend {
+  color: #000;
+}
+
+img {
+  border: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.cl:after {
+  content: "";
+  display: block;
+  overflow: hidden;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
+.cl {
+  zoom: 1;
+}
+
+.Flex {
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #555555;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.els {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  overflow-y: visible;
+  white-space: nowrap;
+}
+
+.well {
+  min-height: 20px;
+  padding: 13px;
+  margin-bottom: 15px;
+  color: #b3b3b3;
+  background-color: #fff;
+  border: 2px solid #b3b3b3;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
