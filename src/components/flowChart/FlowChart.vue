@@ -18,6 +18,10 @@ const props = defineProps({
   taskDefId: {
     type: String,
     default: ''
+  },
+  activityStatsList: {
+    type: Array,
+    default: () => []
   }
 })
 const id = v4()
@@ -36,7 +40,7 @@ async function init() {
       // CustomRenderer
     ]
   });
-  await viewer.importXML(xmlStr).then(function (result) {
+  await viewer.importXML(props.bpmnStr).then(function (result) {
 
     addEventStyle();
     viewer.get('canvas').zoom('fit-viewport', 'auto');
@@ -51,7 +55,7 @@ async function init() {
 }
 
 const addEventBusListener = () => {
-  // if (!props.isClick) return
+  if (!props.isClick) return
   const eventBus = viewer?.get('eventBus');
   const canvas = viewer?.get('canvas')
   // 注册节点事件，eventTypes中可以写多个事件
@@ -113,14 +117,23 @@ function addEventCustomElement() {
   // 获取 Overlays 服务
   const overlays = viewer.get('overlays');
 
-  // 添加覆盖层
-  const overlayId = overlays.add('Activity_0pp2eyn', {
-    position: {
-      bottom: 20,
-      left: -10
-    },
-    html: `<div class='sign_num' element_id='${"Activity_0pp2eyn"}'>${1}</div>`
-  });
+  props.activityStatsList.forEach(item => {
+    const shapeImpl = viewer.get('elementRegistry').get(item.taskDefId)
+    // console.log('shapeImpl', shapeImpl);
+
+    const whiteList = ['bpmn:UserTask', 'bpmn:CallActivity']
+    if (!shapeImpl.type.includes('Gateway')) {
+      // 添加覆盖层
+      const overlayId = overlays.add(item.taskDefId, {
+        position: {
+          bottom: 20,
+          left: -10
+        },
+        html: `<div class='sign_num' element_id='${item.taskDefId}'>${item.instances}</div>`
+      });
+    }
+  })
+
   // 监听点击事件
   const overlayContainer = document.querySelector('.djs-overlay-container');
   abortController = new AbortController();

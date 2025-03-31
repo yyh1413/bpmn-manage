@@ -1,10 +1,10 @@
 <template>
-  <div class="w-[80%] h-full flex">
+  <div class="flex-1 h-full flex">
     <div class="flex-1">
       <div class=" flex-1 h-[70%]">
-        <FlowChart :bpmnStr="bpmnStr" v-if="bpmnStr" />
+        <FlowChart :bpmnStr="bpmnStr" v-if="bpmnStr" :activityStatsList="processInfo.activityStatsList" />
       </div>
-      <div class="flex-1 h-[30%] ">
+      <div class="flex-1 h-[30%] px-2">
         <InstanceList :processInfo="processInfo" />
       </div>
     </div>

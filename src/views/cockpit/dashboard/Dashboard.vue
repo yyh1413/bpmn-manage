@@ -49,12 +49,12 @@ const rightNow = ref([
 
 const deployed = ref([
   {
-    num: 3,
+    num: 0,
     name: '模型定义',
     path: '/cockpit/modalList'
   },
   {
-    num: 3,
+    num: 0,
     name: '流程定义',
     path: '/cockpit/processesList'
   },

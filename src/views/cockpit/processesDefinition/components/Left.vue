@@ -1,5 +1,5 @@
 <template>
-  <div class="w-[20%] h-full " style="border-right: 1px solid #ddd;">
+  <div class="w-[280px] h-full " style="border-right: 1px solid #ddd;">
     <div v-for="(item, index) in leftData" :key="item.name" class="mb-3" @mouseenter="mouseenter(index)" @mouseleave="mouseenter()">
       <div class="font-bold flex">
         <span class="mr-2"> {{ item.name }}:</span>
