@@ -53,7 +53,7 @@ export default function Assignee(props) {
     <${SelectEntry}
       id=${id}
       element=${element}
-      label=${'委托人'}
+      label=${'处理人'}
       getValue=${getValue}
       setValue=${setValue}
       debounce=${debounce}

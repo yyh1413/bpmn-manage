@@ -2,7 +2,7 @@
  *参考 https://github.com/bpmn-io/bpmn-js-i18n
  */
 
-const translations = {
+export const cnTranslations = {
 
   "Name": "名称",
   "Value": "值",
@@ -35,7 +35,7 @@ const translations = {
   "Cancel End Event": "取消结束事件",
   "Change type": "更改类型",
   "Collapsed Pool": "折叠池",
-  "Collection": "集合",
+  "Collection": "多处理人集合",
   "Compensation Boundary Event": "补偿边界事件",
   "Compensation End Event": "结束补偿事件",
   "Compensation Intermediate Throw Event": "中间补偿抛出事件",
@@ -240,9 +240,9 @@ const translations = {
   "Condition Expression": "条件表达式",
   "Condition": "条件",
   "Process documentation": "流程文档",
-  "Assignee": "委托人",
+  "Assignee": "处理人",
   "Candidate groups": "候选组",
-  "Candidate users": "候选用户",
+  "Candidate users": "多处理人",
   "Due date": "期限",
   "The due date as an EL expression (e.g. ${someDate}) or an ISO date (e.g. 2015-06-26T09:54:00).": "到期日期为EL表达式(例如${someDate})或ISO日期(例如2015-06-26T09:54:00)",
   "Follow up date": "跟进日期",
@@ -259,7 +259,7 @@ const translations = {
   "Multi-instance": "多实例",
   "Loop cardinality": "循环基数",
   "Completion condition": "完成条件",
-  "Element variable": "元素变量",
+  "Element variable": "处理人标识",
   "Asynchronous before": "异步之前",
   "Asynchronous after": "异步之后",
 };

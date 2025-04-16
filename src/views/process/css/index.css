@@ -1,0 +1,45 @@
+ .bpmn-create .entry-header {
+   display: none;
+ }
+
+
+ .bpmn-create .entry {
+   display: none !important;
+ }
+
+ .bpmn-create .entry[data-id="create-exclusive-gateway"],
+ .bpmn-create .entry[data-id="create-parallel-gateway"],
+ .bpmn-create .entry[data-id="create-task"],
+ .bpmn-create .entry[data-id="create-user-task"],
+ .bpmn-create .entry[data-id="create-service-task"],
+ .bpmn-create .entry[data-id="create-none-start-event"],
+ .bpmn-create .entry[data-id="create-none-end-event"],
+ .bpmn-create .entry[data-id="create-timer-start"],
+ .bpmn-create .entry[data-id=""] {
+   display: block !important;
+ }
+
+
+
+ .bpmn-append .entry-header {
+   display: none;
+ }
+
+ .bpmn-append .entry {
+   display: none !important;
+ }
+
+ .bpmn-append .entry[data-id="append-exclusive-gateway"],
+ .bpmn-append .entry[data-id="append-parallel-gateway"],
+ .bpmn-append .entry[data-id="append-task"],
+ .bpmn-append .entry[data-id="append-user-task"],
+ .bpmn-append .entry[data-id="append-service-task"],
+ .bpmn-append .entry[data-id="append-none-start-event"],
+ .bpmn-append .entry[data-id="append-none-end-event"],
+ .bpmn-append .entry[data-id="append-timer-start"] {
+   display: block !important;
+ }
+
+ .group~[data-group="connect"] {
+   display: none !important;
+ }

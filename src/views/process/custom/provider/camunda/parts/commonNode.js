@@ -2,7 +2,7 @@ import Assignee from './components/Assignee';
 import { hideProperties } from '@p/utils/setProperties';
 import { userTaskShowGroup } from '@p/config/properties';
 
-export default function optionUserTask(element, groups) {
+export default function optionNode(element, groups) {
   // console.log(groups.value);
 
   setUserAssignment(groups);

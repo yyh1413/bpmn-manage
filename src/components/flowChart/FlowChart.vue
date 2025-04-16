@@ -40,12 +40,28 @@ async function init() {
       // CustomRenderer
     ]
   });
-  await viewer.importXML(props.bpmnStr).then(function (result) {
+  await viewer.importXML(xmlStr).then(function (result) {
 
     addEventStyle();
     viewer.get('canvas').zoom('fit-viewport', 'auto');
     addEventBusListener();
     addEventCustomElement();
+    console.log(document.getElementById('zoom-in'));
+
+    document.getElementById('zoom-in').addEventListener('click', () => {
+      viewer.get('zoomScroll').stepZoom(1);
+    });
+
+    document.getElementById('zoom-out').addEventListener('click', () => {
+      console.log(1122);
+
+      // viewer.get('zoomScroll').stepZoom(-1);
+      viewer.get('canvas').zoom('fit-viewport', -1);
+    });
+
+    document.getElementById('zoom-reset').addEventListener('click', () => {
+      viewer.get('canvas').zoom('fit-viewport', 'auto');
+    });
     // centerDiagram();
   }).catch(function (err) {
     const { warnings, message } = err;
@@ -77,6 +93,7 @@ const addEventBusListener = () => {
     gfx.classList.remove('pointer-cursor');
     canvas.removeMarker(element.id, 'highlight');
   });
+
   eventTypes.forEach((eventType) => {
     eventBus?.on(eventType, (e) => {
       const { element } = e;
@@ -159,7 +176,11 @@ onMounted(() => {
 
 <template>
   <div :id="'canvas' + id" class="bg-white h-full"></div>
-
+  <div class="zoom-controls absolute top-0 right-0 m-4 z-50">
+    <button id="zoom-in">放大</button>
+    <button id="zoom-out">缩小</button>
+    <button id="zoom-reset">还原</button>
+  </div>
 </template>
 
 <style></style>

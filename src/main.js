@@ -6,7 +6,6 @@ import App from './App.vue'
 import router from './router'
 import 'vue-global-api'
 import store from './store'
-import './styles/element/index.scss'
 
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 

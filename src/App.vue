@@ -8,7 +8,6 @@ import FlowChart from './components/flowChart/FlowChart.vue';
   <!-- <div class="w-[1000px] h-[100vh]">
     <FlowChart />
   </div> -->
-
   <el-config-provider :locale="zhCn">
     <router-view />
   </el-config-provider>
